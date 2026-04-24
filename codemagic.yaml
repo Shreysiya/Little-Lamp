@@ -4,8 +4,10 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - unzip *.zip
-      - cd */
+      - echo "Unzipping project"
+      - unzip app.zip
+      - echo "Entering project folder"
+      - cd */ 
       - flutter pub get
       - flutter build apk --release
     artifacts:
